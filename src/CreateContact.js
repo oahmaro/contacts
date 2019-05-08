@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Link } from '@reach/router'
+import { Link, navigate } from '@reach/router'
 import ImageInput from './ImageInput'
 import serializeForm from 'form-serialize'
 
@@ -10,6 +10,7 @@ class CreateContact extends Component {
 
     if (this.props.onCreateContact) {
       this.props.onCreateContact(values)
+      navigate('/')
     }
   }
 
